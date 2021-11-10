@@ -8,6 +8,32 @@
 
 // font-family: 'Poppins', sans-serif;
 // font-family: 'Cabin Sketch', cursive;
+:root {
+  --lggreen: #5ac817;
+  --dgreen: #0b5b3e;
+  --limegreen: #e9fbd3;
+  --lightestgreen: #ebfbd5;
+  --seagreen: #95cea2;
+  --olivegreen: #9ab47b;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #fff;
+  background-image: -webkit-gradient(
+    linear,
+    40% 0%,
+    75% 84%,
+    from(#4d9c41),
+    to(#19911d),
+    color-stop(0.6, #54de5d)
+  );
+}
+
 
 html,
 body {
@@ -19,7 +45,7 @@ body {
     content: '';
     width: 100%;
     height: 100%;
-    background-image: url('../public/vercel.svg');
+    background-image: url('../public/mainbgpic.png');
     position: fixed;
     left: 0;
     top: 0;
@@ -35,3 +61,111 @@ body {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
+
+.hero-container__height{
+  height: calc( 100vh - 120px );
+}
+
+.my-font {
+  font-family: "Poppins", sans-serif;
+}
+.head-font {
+  font-family: "Cabin Sketch", cursive;
+}
+.lgreen {
+  color: var(--lggreen);
+}
+.bglgreen {
+  background-color: var(--lggreen);
+}
+.dgreen {
+  color: var(--dgreen);
+}
+.bgdgreen {
+  background-color: var(--dgreen);
+}
+.llimegreen {
+  color: var(--limegreen);
+}
+.limegreenbg {
+  background-color: var(--limegreen);
+}
+.lightesgreenbg {
+  background-color: var(--lightestgreen);
+}
+.seagreen {
+  color: var(--seagreen);
+}
+.olivegreen {
+  color: var(--olivegreen);
+}
+.olivegreenbg {
+  background-color: var(--olivegreen);
+}
+.borderlgreen {
+  border: 4px solid var(--lggreen);
+}
+/*! Button Gradient */
+.btn-gradient {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--lggreen),
+    var(--dgreen)
+  );
+}
+
+
+/* Responsive */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .padding {
+    padding: 0 10px 0 10px;
+  }
+  .hide-phone {
+    display: none;
+  }
+}
+
+// !== NAVBAR !==
+.phone-menu {
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+  }
+  .chevron {
+    right: -15px;
+  }
+  .chevron::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    border: solid 2px rgba(229, 231, 235, 1);
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    top: -10px;
+    right: 15px;
+  }
+  .chevron::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 30px;
+    width: 40px;
+    border-radius: 5px;
+    z-index: 2;
+    top: 0px;
+    right: 10px;
+  }
+  @keyframes growDown {
+    0% {
+      transform: scaleY(0);
+    }
+    80% {
+      transform: scaleY(1.1);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
+// !== NAVBAR==ENDS !==
