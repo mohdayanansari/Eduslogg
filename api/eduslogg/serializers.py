@@ -13,3 +13,8 @@ class CareerOptionSerializer(ModelSerializer):
     class Meta:
         model = CareerOption
         fields = '__all__'
+
+class InstituteSerializer(ModelSerializer):
+    class Meta:
+        model = Institute
+        fields = '__all__'
