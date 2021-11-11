@@ -3,7 +3,7 @@ import Link from "next/link";
 function SimpleBtn({ btnName }) {
   return (
     <>
-      <button className="px-16 py-3 text-xl font-medium text-white transform rounded-full my-font bglgreen hover:scale-98 focus:ring-4 focus:ring-green-800 focus:ring-offset-2">
+      <button className="px-12 py-2 text-base font-medium text-white transform rounded-full md:text-xl md:px-16 md:py-3 my-font bglgreen hover:scale-98 focus:ring-4 focus:ring-green-800 focus:ring-offset-2">
         {btnName}
       </button>
     </>

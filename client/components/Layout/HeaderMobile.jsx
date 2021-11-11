@@ -22,7 +22,7 @@ const HeaderMobile = () => {
 
   return (
     <>
-      <div className="w-full py-[5px] px-[10px] bg-red-300 fixed top-0 flex items-center justify-between shadow-md md:hidden">
+      <div className="w-full py-[5px] px-[10px] glassmorphism z-10 fixed top-0 flex items-center justify-between shadow-md md:hidden">
         {/* col-1 */}
         <div>
           <Link href="/">

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { MainHeading, GradientBtn } from "../components/index";
+import { MainHeading, GradientBtn, Tabs } from "../components/index";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="container grid grid-cols-1 px-20 mx-auto mb-8 hero-container__height md:grid-cols-8">
+      <div className="grid grid-cols-1  w-full px-[20px] md:px-20 mb-8 hero-container__height md:grid-cols-8">
         {/* col-1 */}
         <div className="   mt-[100px]  md:col-span-5">
           <p className="text-sm font-bold md:text-base lgreen my-font">
@@ -36,9 +36,11 @@ export default function Home() {
 
         {/* col-2 */}
         <div className="flex items-center w-full md:col-span-3 md:justify-start ">
-          <img src="/img/schoolbg.gif" alt="gif" className="w-3/4 mx-auto md:w-full md:ml-[-100px] md:m-0" />
+          <img src="/img/schoolbg.gif" alt="gif" className="w-3/4 mx-auto md:w-full md:ml-[-100px] md:m-0 opacity-80" />
         </div>
       </div>
+
+      <Tabs />
     </>
   );
 }

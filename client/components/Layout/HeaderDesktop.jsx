@@ -7,7 +7,6 @@ const HeaderDesktop = () => {
       <div className="container flex w-full h-[80px] glassmorphism shadow-lg px-20 mx-auto mb-8 hide-phone">
         {/* col-1 */}
         <div className="flex items-center justify-start w-1/5 ">
-          {/* <Image src='/logo.svg' unoptimized layout='fill' width={100} height={100}  /> */}
           <Link href="/">
             <img
               src="/edu-Slogg.png"
