@@ -24,6 +24,20 @@ class CareerOption(models.Model):
 
 class Institute(models.Model):
     name = models.CharField(max_length=100, null=True)
+    photo = models.ImageField(null=True)
+    location = models.CharField(max_length=100, null=True)
+    description = models.CharField(max_length=200, null=True)
+
+    def __str__(self):
+        return self.name
+
+    @property
+    def profileURL(self):
+        try:
+            url = self.photo.url
+        except:
+            url = ''
+        return url
     
 
     def __repr__(self) -> str:
