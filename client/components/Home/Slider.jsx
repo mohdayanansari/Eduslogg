@@ -29,7 +29,7 @@ const Slider = () => {
     getData();
   }, []);
 
-  //   console.log(cardData);
+  console.log(cardData);
 
   return (
     <div className="relative w-full mb-8 overflow-hidden">
@@ -41,7 +41,9 @@ const Slider = () => {
           return (
             <>
               <SwiperSlide>
-                <img src={item.profileURL} alt="card" />
+                <div className="w-2/4 h-full bg-gray-50"  >
+                  <img src={`http://127.0.0.1:8000${item.photo}`} alt="card" className="object-cover h-full rounded-lg shadow-lg" />
+                </div>
                 <div>
                   <h1 className="text-2xl font-bold text-white md:text-4xl">
                     {item.name}
