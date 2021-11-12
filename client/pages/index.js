@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { MainHeading, GradientBtn, Tabs } from "../components/index";
+import { MainHeading, GradientBtn, Tabs, Slider } from "../components/index";
 
 export default function Home() {
   return (
@@ -41,6 +41,7 @@ export default function Home() {
       </div>
 
       <Tabs />
+      <Slider />
     </>
   );
 }
