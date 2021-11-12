@@ -32,3 +32,10 @@ def institutes(request):
     institutes = Institute.objects.all()
     serializer = InstituteSerializer(institutes, many=True)
     return Response(serializer.data)
+
+
+@api_view(['GET'])
+def blogs(request):
+    blogs = Blog.objects.all()
+    serializer = BlogSerializer(blogs, many=True)
+    return Response(serializer.data)

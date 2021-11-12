@@ -18,3 +18,8 @@ class InstituteSerializer(ModelSerializer):
     class Meta:
         model = Institute
         fields = '__all__'
+
+class BlogSerializer(ModelSerializer):
+    class Meta:
+        model = Blog
+        fields = '__all__'
