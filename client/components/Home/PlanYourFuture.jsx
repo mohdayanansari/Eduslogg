@@ -4,7 +4,9 @@ import { Heading } from "..";
 const Card = () => {
   return (
     <>
-      <div className="h-[400px] shadow-lg bg-white border border-gray-200 p-5 rounded-3xl"></div>
+      <div className="h-[400px] shadow-lg bg-white border border-gray-200 p-5 rounded-3xl">
+        
+      </div>
     </>
   );
 };

@@ -6,6 +6,8 @@ import {
   Slider,
   Hero,
   PlanYourFuture,
+  BlogNews,
+  Contact,
 } from "../components/index";
 
 export default function Home() {
@@ -21,6 +23,8 @@ export default function Home() {
       <Tabs />
       <Slider />
       <PlanYourFuture />
+      <BlogNews />
+      <Contact />
     </>
   );
 }
