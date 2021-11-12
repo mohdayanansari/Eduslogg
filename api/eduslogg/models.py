@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.base import ModelStateFieldsCacheDescriptor
 
 class Student(models.Model):
     name = models.CharField(max_length=100, null=True)
@@ -27,6 +28,10 @@ class Institute(models.Model):
     photo = models.ImageField(null=True)
     location = models.CharField(max_length=100, null=True)
     description = models.CharField(max_length=200, null=True)
+    models.DateField(auto_now=True, auto_now_add=True)
+
+    def __repr__(self):
+        return self.name
 
     def __str__(self):
         return self.name
@@ -40,8 +45,24 @@ class Institute(models.Model):
         return url
     
 
-    def __repr__(self) -> str:
-        return self.name
+
+
+class Blog(models.Model):
+    heading = models.CharField(max_length=100, null=True)
+    snap = models.ImageField(null=True)
+    content = models.CharField(max_length=1000, null=True)
+
     
-    def __str__(self) -> str:
-        return self.name
+    def __repr__(self):
+        return self.heading
+
+    def __str__(self):
+        return self.heading
+
+    @property
+    def snapURL(self):
+        try:
+            url = self.snap.url
+        except:
+                url=" "
+        return url
