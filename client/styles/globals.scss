@@ -180,25 +180,20 @@ body {
 
 .mySwiper{
   // width: 20px !important;
-  padding-left: 50px !important;
-  padding-right: 50px !important;
+  padding: 50px !important;
   // background: rgba(255, 255, 255, 0.25);
 
 }
 .swiper {
-  width: 60%;
-  height: 320px;
+  width: 80%;
+  margin: 0 !important;
+  height: 500px;
 }
 
 .swiper-slide {
   display: flex;
   padding: 20px;
-  gap: 20px;
-  // align-items: center;
-  // justify-content: center;
-  border-radius: 18px;
-  font-size: 22px;
-  font-weight: bold;
+  border-radius: 20px;
   color: #fff;
 }
 

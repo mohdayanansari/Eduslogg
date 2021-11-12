@@ -9,7 +9,7 @@ const MainHeading = ({ mainHeading }) => {
 const Heading = ({ heading }) => {
   return (
     <>
-      <h1 className="text-4xl font-bold text-black text-opacity-70 my-font">
+      <h1 className="text-2xl font-bold text-black md:text-4xl text-opacity-70 my-font">
         {heading}
       </h1>
     </>
