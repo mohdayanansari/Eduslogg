@@ -1,3 +1,4 @@
+from django import forms
 from django.db import models
 from django.db.models.base import ModelStateFieldsCacheDescriptor
 
@@ -66,3 +67,12 @@ class Blog(models.Model):
         except:
                 url=" "
         return url
+
+
+class Query(models.Model):
+  name = models.CharField(max_length=100)
+  email = models.EmailField(max_length=100)
+  query = models.CharField(max_length=500)
+      
+  def __str__(self):
+    return self.query
