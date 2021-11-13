@@ -14,7 +14,7 @@ const GradientBtn = ({ gradientBtnName, handleBTN }) => {
   return (
     <>
       <Link href={handleBTN}>
-        <button className="w-40 py-2 text-base text-white rounded-full md:py-5 md:w-52 btn-gradient">
+        <button className="w-40 px-5 py-2 text-base text-white rounded-full md:py-5 md:w-52 btn-gradient">
           {gradientBtnName}
         </button>
       </Link>

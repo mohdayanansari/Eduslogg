@@ -248,3 +248,29 @@ body {
 // }, 0.5
 
 // todo:::::::::::::::::SLIDER----CARDS:::::::::::::::::::::::::::
+
+
+// careers portal page
+.section-2__card-wrapper {
+  position: relative;
+  padding: 80px 0 0 80px;
+  /* filter: blur(10px); */
+
+}
+.section-2__card {
+  padding: 80px 30px 80px 30px;
+  margin-top: -120px;
+  /* filter: blur(10px); */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+/** Desired Career Card */
+.desired-career-card-border__left{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.desired-career-card-border__right{
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+/** Desired Career Card End*/

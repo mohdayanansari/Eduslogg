@@ -4,7 +4,7 @@ import Link from "next/link";
 const HeaderDesktop = () => {
   return (
     <>
-      <div className="sticky z-50 top-0 container flex w-full h-[60px] glassmorphism shadow-lg px-20 mx-auto mb-8 hide-phone">
+      <div className="sticky z-50 top-0  flex w-full h-[60px] glassmorphism shadow-lg px-20 mx-auto mb-8 hide-phone">
         {/* col-1 */}
         <div className="flex items-center justify-start w-1/5 ">
           <Link href="/">
