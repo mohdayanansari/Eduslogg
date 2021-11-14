@@ -86,3 +86,26 @@ class Query(models.Model):
       
   def __str__(self):
     return self.query
+
+
+
+class CourseCategory(models.Model):
+    name = models.CharField(max_length=50, null=True)
+
+    def __repr__(self):
+        return self.name
+    
+    def __str__(self):
+        return self.name
+
+
+class Course(models.Model):
+    name = models.CharField(max_length=50)
+    course_category = models.ForeignKey(CourseCategory, null=True, on_delete=models.CASCADE)
+    price = models.IntegerField(null=True)
+
+    def __repr__(self):
+        return self.name
+    
+    def __str__(self):
+        return self.name

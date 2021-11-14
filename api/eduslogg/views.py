@@ -66,3 +66,19 @@ def category(request):
     serializer = CategorySerializer(categories, many=True)
 
     return Response(serializer.data)
+
+
+@api_view(['GET'])
+def course(request):
+    courses = Course.objects.all()
+    serializer = CourseSerializer(courses, many=True)
+
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def courseCategory(request):
+    courses = CourseCategory.objects.all()
+    serializer = CourseCategorySerializer(courses, many=True)
+
+    return Response(serializer.data)

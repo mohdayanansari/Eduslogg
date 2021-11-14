@@ -35,3 +35,15 @@ class CategorySerializer(ModelSerializer):
     class Meta:
         model = CareerCategory
         fields='__all__'
+
+
+class CourseSerializer(ModelSerializer):
+    class Meta:
+        model = Course
+        fields='__all__'
+
+
+class CourseCategorySerializer(ModelSerializer):
+    class Meta:
+        model = CourseCategory
+        fields='__all__'
