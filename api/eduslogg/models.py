@@ -13,9 +13,19 @@ class Student(models.Model):
     def __str__(self):
         return self.name
 
+class CareerCategory(models.Model):
+    name = models.CharField(max_length=50,null=True)
+
+    def __repr__(self):
+        return self.name
+    
+    def __str__(self):
+        return self.name
+
 
 class CareerOption(models.Model):
     name = models.CharField(max_length=100, null=True)
+    category = models.ForeignKey(CareerCategory, on_delete=models.CASCADE, null=True)
     total_levels = models.IntegerField()
 
     def __repr__(self):
