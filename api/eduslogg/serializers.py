@@ -30,3 +30,8 @@ class QuerySerialzer(ModelSerializer):
     class Meta:
         model = Query
         fields = '__all__'
+
+class CategorySerializer(ModelSerializer):
+    class Meta:
+        model = CareerCategory
+        fields='__all__'

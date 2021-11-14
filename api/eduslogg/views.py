@@ -58,3 +58,11 @@ def query(request):
     serializer = QuerySerialzer(queries, many=True)
 
     return Response(serializer.data)
+
+
+@api_view(['GET'])
+def category(request):
+    categories = CareerCategory.objects.all()
+    serializer = CategorySerializer(categories, many=True)
+
+    return Response(serializer.data)

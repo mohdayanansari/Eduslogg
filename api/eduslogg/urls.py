@@ -10,4 +10,5 @@ urlpatterns = [
     path('blogs/',views.blogs, name="blogs"),
     path('queryform/',views.queryForm, name="query_form"),
     path('queries/',views.query, name="queries"),
+    path('career-streams/',views.category, name="categories"),
 ]
