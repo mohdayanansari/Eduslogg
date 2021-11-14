@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import Chart from "react-apexcharts";
+import dynamic from "next/dynamic";
+
+const Chart = dynamic(() => import("react-apexcharts"), {ssr: false})
+// import Chart from "react-apexcharts";
+
+
+
 
 const RadialBar = () => {
   const [series, setSeries] = useState([75]);

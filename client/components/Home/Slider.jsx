@@ -30,7 +30,6 @@ const Slider = () => {
     getData();
   }, []);
 
-  console.log(cardData);
 
   return (
     <div className="relative w-full mb-8 overflow-hidden">

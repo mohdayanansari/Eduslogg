@@ -51,8 +51,6 @@ const BlogNews = () => {
     getData();
   }, []);
 
-  console.log("🔥🔥");
-  console.log(myData);
   return (
     <>
       <div className="w-full px-[20px] md:px-20 my-28 ">

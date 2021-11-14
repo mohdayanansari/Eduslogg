@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import MyRadialBar from "./MyRadialBar";
+// import axios from "axios";
 
 const DesiredCareerCards = () => {
+
+  const getData = async () => {
+    try {
+      const res = await fetch("http://127.0.0.1:8000/careers/");
+
+      const data = await res.json();
+
+      console.log("😀😀😀");
+      console.table(data)
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
+
+
   return (
     <>
       <div className="flex w-full shadow-lg my-font rounded-2xl">
