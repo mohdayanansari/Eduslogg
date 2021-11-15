@@ -5,7 +5,7 @@ from . import views
 urlpatterns = [
     # testing urls ......
     path('queries/',views.query, name="queries"),
-    path('career-streams/',views.category, name="categories"),
+    path('career-streams/',views.careerCategory, name="categories"),
     path('course_category/',views.courseCategory, name="course_cats"),
     path('',views.getRoutes, name='getroutes'),
     # end testing urls ...

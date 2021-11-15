@@ -61,7 +61,7 @@ def query(request):
 
 
 @api_view(['GET'])
-def category(request):
+def careerCategory(request):
     categories = CareerCategory.objects.all()
     serializer = CategorySerializer(categories, many=True)
 
