@@ -1,32 +1,36 @@
 from django import forms
 from django.db import models
 from django.db.models.base import ModelStateFieldsCacheDescriptor
+from django.db.models.fields import datetime
 
 class Student(models.Model):
     name = models.CharField(max_length=100, null=True)
     phone = models.CharField(max_length=50, null=True)
     email = models.CharField(max_length=100, null=True)
 
-    def __repr__(self):
-        return self.name
-    
-    def __str__(self):
-        return self.name
-
-class CareerCategory(models.Model):
-    name = models.CharField(max_length=50,null=True)
 
     def __repr__(self):
         return self.name
     
     def __str__(self):
         return self.name
+
 
 
 class CareerOption(models.Model):
     name = models.CharField(max_length=100, null=True)
-    category = models.ForeignKey(CareerCategory, on_delete=models.CASCADE, null=True)
     total_levels = models.IntegerField()
+
+    def __repr__(self):
+        return self.name
+    
+    def __str__(self):
+        return self.name
+
+
+class CareerCategory(models.Model):
+    name = models.CharField(max_length=50,null=True)
+    careers = models.ManyToManyField(CareerOption, related_name='streams')
 
     def __repr__(self):
         return self.name
@@ -39,7 +43,6 @@ class Institute(models.Model):
     photo = models.ImageField(null=True)
     location = models.CharField(max_length=100, null=True)
     description = models.CharField(max_length=200, null=True)
-    models.DateField(auto_now=True, auto_now_add=True)
 
     def __repr__(self):
         return self.name
@@ -89,8 +92,9 @@ class Query(models.Model):
 
 
 
-class CourseCategory(models.Model):
-    name = models.CharField(max_length=50, null=True)
+class Course(models.Model):
+    name = models.CharField(max_length=50)
+    price = models.IntegerField(null=True)
 
     def __repr__(self):
         return self.name
@@ -99,10 +103,9 @@ class CourseCategory(models.Model):
         return self.name
 
 
-class Course(models.Model):
-    name = models.CharField(max_length=50)
-    course_category = models.ForeignKey(CourseCategory, null=True, on_delete=models.CASCADE)
-    price = models.IntegerField(null=True)
+class CourseCategory(models.Model):
+    name = models.CharField(max_length=50, null=True)
+    courses = models.ManyToManyField(Course, related_name='streams')
 
     def __repr__(self):
         return self.name

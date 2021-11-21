@@ -1,4 +1,5 @@
 from django.db.models import fields
+from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
 from .models import *
 
@@ -9,9 +10,10 @@ class StudentSerializer(ModelSerializer):
 
         
 class CareerOptionSerializer(ModelSerializer):
+    streams = serializers.StringRelatedField(many=True)
     class Meta:
         model = CareerOption
-        fields = '__all__'
+        fields = ['name','total_levels','streams']
 
 
 class InstituteSerializer(ModelSerializer):
@@ -38,9 +40,10 @@ class CategorySerializer(ModelSerializer):
 
 
 class CourseSerializer(ModelSerializer):
+    streams = serializers.StringRelatedField(many=True)
     class Meta:
         model = Course
-        fields='__all__'
+        fields=['name','price','streams']
 
 
 class CourseCategorySerializer(ModelSerializer):
